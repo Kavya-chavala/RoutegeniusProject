@@ -1,0 +1,1043 @@
+/* src/index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/* Global Styles */
+
+html, body, #root {
+
+height: 100%; /* Ensure html, body, root take full height */
+ margin: 0;
+
+ padding: 0;
+
+overflow-x: hidden; /* Prevent horizontal scrollbar */
+
+ box-sizing: border-box; /* Crucial for consistent sizing */
+
+}
+
+
+
+body {
+
+ font-family: 'Inter', sans-serif;
+
+ background-color: #0d1117; /* GitHub Dark theme background */
+
+ display: flex; /* Use flex for the body to manage its child (#root) */
+
+ justify-content: center; /* Center horizontally */
+
+align-items: flex-start; /* Align to start vertically, allowing content to push height */
+
+ min-height: 100vh; /* Ensure body takes at least full viewport height */
+
+color: #c9d1d9; /* Light grey text for readability */
+line-height: 1.6;
+
+ font-size: 16px;
+
+ box-sizing: border-box;
+
+}
+
+
+
+#root {
+
+ width: 100%;
+
+display: flex; /* Use flex for #root to center its content */
+
+ flex-direction: column; /* Stack children vertically */
+
+ align-items: center; /* Center children horizontally */
+
+padding: 20px 0; /* Add vertical padding for content at top/bottom */
+
+ box-sizing: border-box;
+
+}
+
+
+
+.container {
+
+ background-color: #161b22; /* Darker container background */
+
+ padding: 35px 45px; /* More generous padding */
+
+ border-radius: 15px; /* More rounded corners */
+
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Deeper shadow */
+
+ width: 100%;
+
+ max-width: 800px; /* Increased max-width for better content display, especially tables */
+
+text-align: center;
+
+ border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border */
+
+animation: fadeIn 0.8s ease-out;
+
+ box-sizing: border-box;
+
+margin: 15px 0; /* Add margin for spacing between containers on a page */
+
+display: flex; /* Make container a flex container */
+
+flex-direction: column; /* Stack children vertically */
+
+ align-items: center; /* Center children horizontally within container */
+
+}
+
+
+
+@keyframes fadeIn {
+
+ from { opacity: 0; transform: translateY(-25px); }
+
+ to { opacity: 1; transform: translateY(0); }
+
+}
+
+
+
+h1, h2, h3, h4 {
+
+ color: #58a6ff; /* GitHub Blue accent for headings */
+
+margin-bottom: 28px;
+
+ font-weight: 700;
+
+width: 100%; /* Ensure headings take full width */
+
+}
+
+
+
+h1 {
+
+font-size: 3.2em; /* Larger main heading */
+
+font-weight: 800;
+
+ letter-spacing: -0.04em;
+
+ text-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+
+}
+
+
+
+h2 {
+
+font-size: 2.5em;
+
+}
+
+
+
+h3 {
+
+ font-size: 1.8em;
+
+}
+
+
+
+h4 {
+
+ font-size: 1.4em;
+
+ color: #c9d1d9; /* Sub-headings default to lighter text */
+
+}
+
+
+
+p {
+
+color: #c9d1d9; /* Default paragraph color */
+
+ font-size: 1em;
+
+}
+
+
+
+form {
+
+ display: flex;
+
+ flex-direction: column;
+
+ gap: 22px; /* More spacing between form elements */
+
+ margin-top: 25px;
+
+padding: 15px; /* Padding for forms */
+
+border-radius: 12px;
+
+background-color: #1a1f26; /* Slightly different background for form areas */
+
+border: 1px solid #30363d;
+
+ text-align: left; /* Ensure form labels/inputs align left within form */
+
+width: 100%; /* Forms should take full width within their parent */
+
+box-sizing: border-box;
+
+}
+
+
+
+label {
+
+ text-align: left;
+
+ font-weight: 500;
+
+ color: #c9d1d9;
+
+ margin-bottom: -12px; /* Pull label closer to input */
+
+ font-size: 0.9em;
+
+}
+
+
+
+input[type="text"],
+
+input[type="email"],
+
+input[type="password"],
+
+select {
+
+ padding: 15px 20px; /* More padding */
+
+border: 1px solid #30363d; /* Darker border for inputs */
+
+ border-radius: 10px; /* More rounded inputs */
+
+ background-color: #0d1117; /* Same as body background for depth */
+
+ color: #c9d1d9;
+
+ width: 100%; /* Inputs should take full width of their form */
+
+box-sizing: border-box;
+
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+ font-size: 1.05em;
+
+}
+
+
+
+input[type="text"]:focus,
+
+input[type="email"]:focus,
+
+input[type="password"]:focus,
+
+select:focus {
+
+border-color: #58a6ff; /* Highlight on focus */
+
+ outline: none;
+box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.3); /* Glow effect */
+
+}
+
+
+
+button {
+
+background-color: #238636; /* GitHub green for primary actions */
+ color: #c9d1d9; /* Light text on green button */
+
+padding: 16px 32px;
+
+ border: none;
+
+border-radius: 10px;
+
+cursor: pointer;
+
+font-size: 1.15em;
+
+ font-weight: 700;
+
+ transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+ margin-top: 25px;
+
+ box-shadow: 0 5px 20px rgba(35, 134, 54, 0.3);
+
+text-transform: uppercase;
+
+ letter-spacing: 0.05em;
+
+ width: auto; /* Buttons adjust to content */
+
+ align-self: center; /* Center buttons within form */
+
+}
+
+
+
+button:hover {
+
+ background-color: #2ea043; /* Lighter green on hover */
+
+ transform: translateY(-3px);
+
+ box-shadow: 0 8px 25px rgba(35, 134, 54, 0.5);
+
+}
+
+
+
+button:active {
+
+ transform: translateY(0);
+
+ box-shadow: 0 2px 10px rgba(35, 134, 54, 0.2);
+
+}
+
+
+
+.secondary-button {
+
+ background-color: #6a0dad; /* Purple for secondary actions */
+
+ box-shadow: 0 5px 20px rgba(106, 13, 173, 0.3);
+
+}
+
+
+
+.secondary-button:hover {
+ background-color: #8a2be2;
+
+box-shadow: 0 8px 25px rgba(106, 13, 173, 0.5);
+
+}
+
+
+
+.delete-button {
+
+ background-color: #cf222e; /* GitHub red for delete actions */
+
+ box-shadow: 0 5px 20px rgba(207, 34, 46, 0.3);
+
+}
+
+
+
+.delete-button:hover {
+
+ background-color: #e34c59;
+
+ box-shadow: 0 8px 25px rgba(207, 34, 46, 0.5);
+
+}
+
+
+
+.message {
+
+ margin-top: 30px;
+
+ padding: 20px;
+
+ border-radius: 12px;
+
+ font-weight: 500;
+
+ font-size: 1em;
+
+ text-align: center;
+
+ animation: slideIn 0.5s ease-out;
+
+ border-left: 6px solid;
+
+ width: 100%;
+
+box-sizing: border-box;
+
+}
+
+
+
+@keyframes slideIn {
+
+ from { opacity: 0; transform: translateY(15px); }
+
+to { opacity: 1; transform: translateY(0); }
+
+}
+
+
+
+.message.success {
+
+ background-color: #d4edda;
+
+ color: #155724;
+
+ border-color: #28a745;
+
+}
+
+
+
+.message.error {
+
+ background-color: #f8d7da;
+
+color: #721c24;
+
+border-color: #dc3545;
+
+}
+
+
+
+a {
+ color: #58a6ff;
+
+text-decoration: none;
+
+font-weight: 600;
+
+ transition: color 0.3s ease;
+
+}
+
+
+
+a:hover {
+
+ color: #79c0ff;
+
+ text-decoration: underline;
+
+}
+
+
+
+/* Table Specific Styles */
+
+table {
+
+width: 100%; /* Table should be 100% of its wrapper */
+
+border-collapse: separate;
+
+ border-spacing: 0;
+
+ margin-top: 35px;
+
+ background-color: #161b22;
+
+ border-radius: 12px;
+
+ overflow: hidden; /* Ensures content stays within rounded corners */
+
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+box-sizing: border-box;
+
+}
+
+
+
+th, td {
+
+ border: 1px solid #30363d;
+
+ padding: 16px 20px;
+
+ text-align: left;
+
+ color: #c9d1d9;
+
+ font-size: 0.95em;
+
+ vertical-align: middle; /* Vertically align content in cells */
+
+}
+
+
+
+th {
+
+ background-color: #1f242b;
+
+ font-weight: 700;
+
+ color: #58a6ff;
+
+ position: sticky;
+
+ top: 0;
+
+ z-index: 1;
+
+text-transform: uppercase;
+
+ font-size: 0.9em;
+
+}
+
+
+
+tr:nth-child(even) {
+
+ background-color: #1a1f26;
+
+}
+
+
+
+tr:hover {
+
+ background-color: #24292f;
+
+}
+
+
+
+.action-buttons button {
+
+ margin-right: 10px;
+
+ padding: 10px 18px;
+
+ font-size: 0.9em;
+
+margin-top: 0;
+
+box-shadow: none;
+
+ text-transform: none;
+
+ letter-spacing: normal;
+
+ font-weight: 600;
+
+}
+
+
+
+.action-buttons button:hover {
+
+ transform: none;
+
+}
+
+
+
+/* Modal Specific Styles */
+
+.modal {
+
+ display: none; /* Crucial: default to hidden */
+
+ justify-content: center;
+
+ align-items: center;
+ position: fixed;
+
+ z-index: 1000;
+
+ left: 0;
+
+ top: 0;
+
+ width: 100%;
+
+ height: 100%;
+
+ background-color: rgba(0,0,0,0.85); /* Even darker, more opaque overlay */
+animation: fadeInOverlay 0.3s ease-out;
+
+ box-sizing: border-box;
+
+}
+
+
+
+.modal.open {
+
+display: flex; /* Display when 'open' class is present */
+
+}
+
+
+
+.modal-content {
+
+ background-color: #1e1e1e;
+
+ padding: 40px;
+
+ border: 1px solid #30363d;
+
+ border-radius: 18px;
+
+ width: 90%;
+
+ max-width: 700px; /* Increased max-width for modal content */
+ position: relative;
+
+ text-align: left;
+
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+
+ animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+ box-sizing: border-box;
+
+ display: flex; /* Make modal content a flex container */
+
+flex-direction: column; /* Stack children vertically */
+
+ align-items: center; /* Center children horizontally within modal */
+
+
+
+ max-height: 90vh; /* Limits the modal content to 90% of viewport height */
+
+ overflow-y: auto; /* Adds vertical scrollbar if content exceeds max-height */
+
+}
+
+
+
+.close-button {
+
+ color: #c9d1d9;
+
+ position: absolute;
+ top: 15px;
+
+right: 20px;
+
+ font-size: 38px;
+
+ font-weight: bold;
+
+cursor: pointer;
+
+transition: color 0.3s ease;
+
+}
+
+
+
+.close-button:hover,
+
+.close-button:focus {
+
+color: #ff4d4d;
+
+}
+
+
+
+/* Dashboard Specific Layouts */
+
+.dashboard-header {
+
+ display: flex;
+justify-content: space-between;
+ align-items: center;
+margin-bottom: 35px;
+ flex-wrap: wrap;
+ gap: 20px;
+ width: 100%;
+ text-align: left;
+
+}
+
+
+
+.dashboard-header h2 {
+
+ margin-bottom: 0;
+
+ flex-grow: 1;
+
+ text-align: left;
+
+}
+
+
+
+.profile-actions {
+
+display: flex;
+
+align-items: center;
+ gap: 15px;
+
+}
+
+
+
+.profile-icon-button {
+
+background-color: #30363d;
+
+ border: 1px solid #c9d1d9;
+
+ border-radius: 50%;
+
+ width: 45px;
+
+ height: 45px;
+
+ display: flex;
+
+ justify-content: center;
+
+align-items: center;
+ font-size: 1.5em;
+
+cursor: pointer;
+
+transition: background-color 0.2s ease, border-color 0.2s ease;
+
+ box-shadow: none;
+
+}
+
+
+
+.profile-icon-button:hover {
+
+background-color: #444c56;
+
+ border-color: #58a6ff;
+
+transform: none;
+
+ box-shadow: none;
+
+}
+
+
+
+.dashboard-section {
+
+ background-color: #1a1f26;
+
+ padding: 30px;
+
+ border-radius: 12px;
+
+ margin-top: 35px;
+
+ text-align: left;
+
+ border: 1px solid #30363d;
+
+ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+
+width: 100%; /* Ensure sections take full width */
+
+ box-sizing: border-box;
+
+}
+
+
+
+.dashboard-section h3 {
+
+ color: #58a6ff;
+
+ margin-top: 0;
+
+ margin-bottom: 25px;
+
+ border-bottom: 1px solid #30363d;
+
+ padding-bottom: 15px;
+width: 100%;
+
+}
+
+
+
+.placeholder-text {
+
+ font-style: italic;
+ color: #aaaaaa;
+
+ margin-top: 25px;
+
+ padding: 20px;
+
+ border: 1px dashed #555;
+border-radius: 8px;
+text-align: center;
+
+background-color: #24292f;
+font-size: 0.95em;
+width: 100%;
+box-sizing: border-box;
+
+}
+
+
+
+/* Home Page Specific Styles */
+
+.home-page {
+
+max-width: 900px;
+padding: 70px;
+ text-align: center;
+
+}
+
+
+
+.home-page h1 {
+
+ font-size: 3em;
+ margin-bottom: 10px;
+ 
+ text-shadow: 0 0 5px rgba(87, 166, 255, 0.3);
+
+}
+
+
+
+.home-page p.tagline {
+
+ color: #8b949e;
+ font-size: 1.2em;
+
+ margin-top: -15px;
+
+ margin-bottom: 60px;
+
+ font-weight: 300;
+
+}
+
+
+
+.role-selection {
+
+display: flex;
+
+ justify-content: center;
+
+ flex-wrap: wrap;
+
+ gap: 45px;
+
+ margin-top: 40px;
+
+ width: 100%;
+
+}
+
+
+
+.role-option {
+
+background-color: #161b22;
+
+ padding: 40px;
+
+ border-radius: 20px;
+
+ border: 1px solid #30363d;
+
+ box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ flex: 1;
+
+ min-width: 300px;
+
+ max-width: 400px;
+
+ display: flex;
+
+ flex-direction: column;
+
+align-items: center;
+
+ text-align: center;
+
+ box-sizing: border-box;
+
+}
+
+
+
+.role-option:hover {
+
+ transform: translateY(-10px) scale(1.03);
+
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8);
+
+ border-color: #58a6ff;
+
+}
+
+
+
+.role-option .icon {
+
+font-size: 6em;
+
+ margin-bottom: 25px;
+
+ text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+.role-option:nth-child(1) .icon { color: #ffd352; }
+
+.role-option:nth-child(2) .icon { color: #a371f7; }
+
+
+
+.role-option h3 {
+
+ margin-top: 0;
+
+ margin-bottom: 18px;
+
+color: #c9d1d9;
+
+font-size: 2em;
+
+}
+
+
+
+.role-option p {
+
+font-size: 1.05em;
+
+color: #8b949e;
+
+ margin-bottom: 35px;
+
+ line-height: 1.6;
+
+}
+
+
+
+.main-login-button {
+
+ width: 100%;
+
+padding: 14px 20px;
+
+ font-size: 1.05em;
+
+margin-top: auto;
+
+}
+
+
+
+/* Back Button Styles */
+
+.back-button {
+
+ background-color: transparent;
+
+ border: 1px solid #58a6ff;
+
+ color: #58a6ff;
+
+ padding: 10px 18px;
+
+ border-radius: 8px;
+
+ cursor: pointer;
+
+ font-size: 0.95em;
+font-weight: 600;
+
+ transition: background-color 0.3s ease, color 0.3s ease;
+
+ margin-bottom: 20px;
+
+ align-self: flex-start; /* Align to the left in a flex container */
+
+}
+
+
+
+.back-button:hover {
+
+background-color: #58a6ff;
+
+ color: #0d1117;
+
+ transform: none;
+box-shadow: none;
+
+}
+
+
+
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 992px) {
+
+ .container { padding: 35px 45px; max-width: 700px; }
+
+ h1 { font-size: 2.8em; }
+
+ h2 { font-size: 2.2em; }
+
+ .home-page h1 { font-size: 3.5em; }
+
+ .home-page p.tagline { font-size: 1.2em; }
+
+ .role-selection { gap: 30px; }
+
+.role-option { min-width: 250px; max-width: 350px; padding: 30px; }
+
+ .role-option .icon { font-size: 5em; }
+
+.dashboard-section { padding: 25px; }
+
+ .modal-content { padding: 30px; }
+
+}
